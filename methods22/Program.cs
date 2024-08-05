@@ -1,9 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Security.Cryptography.X509Certificates;
 
 
 internal class Program
 {
+     static int DiceRoll(int numberOfRolls, int diceSides, int fixedBonus)
+    {
+        var random = new Random();
+        int diceTotal = fixedBonus;
+        while (numberOfRolls > 0)
+        {
+            int dice = random.Next(1, diceSides + 1);
+            diceTotal += dice;
+            numberOfRolls--;
+        }
+        return diceTotal;
+}
     static void SimulateCombat(List<string> characterNames, string monsterName, int monsterHP, int savingThrowDC)
     {
         var random = new Random();
@@ -12,7 +26,7 @@ internal class Program
         Console.WriteLine($"A(n) {monsterName} with {monsterHP} HP appears!");
         while (monsterHP > 0 && characterNames.Count > 0)
         {
-            int diceDmg = random.Next(2, 13);
+            int diceDmg = DiceRoll(2, 6, 0);
             monsterHP -= diceDmg;
             if (monsterHP <= 0)
             {
@@ -30,14 +44,14 @@ internal class Program
                     x = 0;
                     int DCTarget = random.Next(0, characterNames.Count);
                     Console.WriteLine($"The {monsterName} attacks {characterNames[DCTarget]}!");
-                    int d20 = random.Next(1, 21);
-                    if (d20 + 3 >= savingThrowDC)
+                    int result = DiceRoll(1, 20, 3);
+                    if (result >= savingThrowDC)
                     {
-                        Console.WriteLine($"{characterNames[DCTarget]} rolls a {d20 + 3} and is saved from the attack!");
+                        Console.WriteLine($"{characterNames[DCTarget]} rolls a {result} and is saved from the attack!");
                     }
                     else
                     {
-                        Console.WriteLine($"{characterNames[DCTarget]} rolls a {d20 + 3} and fails to save! {characterNames[DCTarget]} is killed!");
+                        Console.WriteLine($"{characterNames[DCTarget]} rolls a {result} and fails to save! {characterNames[DCTarget]} is killed!");
                         characterNames.Remove(characterNames[DCTarget]);
                         if (characterNames.Count == 0)
                         {
@@ -49,22 +63,21 @@ internal class Program
             }
         }
     }
+
     private static void Main(string[] args)
     {
         var characterNames = new List<string> { "Garrosh", "Thrall", "Sylvanas", "Jaina" };
         var monsterName = new List<string> { "Orc", "Azer", "Troll" };
 
 
-
-
-        SimulateCombat(characterNames, monsterName[0], 15, 10);
+        SimulateCombat(characterNames, monsterName[0], DiceRoll(2, 8, 6), 10);
         if (characterNames.Count > 0)
         {
-            SimulateCombat(characterNames, monsterName[1], 39, 18);
+            SimulateCombat(characterNames, monsterName[1], DiceRoll(6, 8, 12), 18);
         }
         if (characterNames.Count > 0)
         {
-            SimulateCombat(characterNames, monsterName[2], 84, 16);
+            SimulateCombat(characterNames, monsterName[2], DiceRoll(8, 10, 40), 16);
             if (characterNames.Count > 0)
             {
                 Console.WriteLine($"{string.Join(", ", characterNames)} survived the battles.");

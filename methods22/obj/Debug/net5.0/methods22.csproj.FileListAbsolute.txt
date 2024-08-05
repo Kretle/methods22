@@ -13,3 +13,4 @@ C:\Users\sollu\source\repos\methods22\methods22\obj\Debug\net5.0\refint\methods2
 C:\Users\sollu\source\repos\methods22\methods22\obj\Debug\net5.0\methods22.pdb
 C:\Users\sollu\source\repos\methods22\methods22\obj\Debug\net5.0\methods22.genruntimeconfig.cache
 C:\Users\sollu\source\repos\methods22\methods22\obj\Debug\net5.0\ref\methods22.dll
+C:\Users\sollu\source\repos\methods22\methods22\obj\Debug\net5.0\methods22.sourcelink.json
