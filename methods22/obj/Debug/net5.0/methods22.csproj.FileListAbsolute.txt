@@ -1,0 +1,15 @@
+C:\Users\sollu\source\repos\methods22\methods22\bin\Debug\net5.0\methods22.exe
+C:\Users\sollu\source\repos\methods22\methods22\bin\Debug\net5.0\methods22.deps.json
+C:\Users\sollu\source\repos\methods22\methods22\bin\Debug\net5.0\methods22.runtimeconfig.json
+C:\Users\sollu\source\repos\methods22\methods22\bin\Debug\net5.0\methods22.runtimeconfig.dev.json
+C:\Users\sollu\source\repos\methods22\methods22\bin\Debug\net5.0\methods22.dll
+C:\Users\sollu\source\repos\methods22\methods22\bin\Debug\net5.0\methods22.pdb
+C:\Users\sollu\source\repos\methods22\methods22\obj\Debug\net5.0\methods22.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sollu\source\repos\methods22\methods22\obj\Debug\net5.0\methods22.AssemblyInfoInputs.cache
+C:\Users\sollu\source\repos\methods22\methods22\obj\Debug\net5.0\methods22.AssemblyInfo.cs
+C:\Users\sollu\source\repos\methods22\methods22\obj\Debug\net5.0\methods22.csproj.CoreCompileInputs.cache
+C:\Users\sollu\source\repos\methods22\methods22\obj\Debug\net5.0\methods22.dll
+C:\Users\sollu\source\repos\methods22\methods22\obj\Debug\net5.0\refint\methods22.dll
+C:\Users\sollu\source\repos\methods22\methods22\obj\Debug\net5.0\methods22.pdb
+C:\Users\sollu\source\repos\methods22\methods22\obj\Debug\net5.0\methods22.genruntimeconfig.cache
+C:\Users\sollu\source\repos\methods22\methods22\obj\Debug\net5.0\ref\methods22.dll

@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\sollu\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\sollu\\.nuget\\packages"
+    ]
+  }
+}
